@@ -26,7 +26,7 @@ export function getBooks() {
                 <h3>${book.title}</h3>
                 <p>Author: ${
                   book.authors ? book.authors[0].name : "Unknown"
-                }</p>
+                }</p><br>
                 <button class="description-button" data-book-key="${
                   book.key
                 }">View Description</button>

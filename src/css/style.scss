@@ -36,18 +36,17 @@ main {
   border-radius: 10px;
   margin: 70px auto;
   padding: 50px;
-  h1 {
-    font-size: 35px;
-    margin-bottom: 30px;
-  }
   input {
-    font-size: 20px;
-    border: 3px none $primary-color;
-    border-radius: 8px;
-    margin-right: 10px;
-    padding: 5px 10px 5px 10px;
+    font-size: 27px;
+    border: 3px solid $border-color;
+    border-radius: 30px;
+    margin-right: -10px;
+    padding: 5px 250px 5px 20px;
     box-shadow: 4px 4px 4px $border-color;
     margin-bottom: 50px;
+  }
+  input:focus {
+    outline: none;
   }
   button {
     border: 3px none $primary-color;
@@ -55,14 +54,30 @@ main {
     border-radius: 8px;
     font-size: 20px;
     padding: 5px 10px 5px 10px;
-    box-shadow: 4px 4px 4px $border-color,
+    box-shadow: 4px $border-color;
+    cursor: pointer;
   }
   button:hover {
     background-color: #ffffffd3;
-    cursor: pointer;
   }
   button:active {
     transform: scale(.98);
+  }
+  .search-button {
+    margin: 0 0 0 0;
+    border: 1px none $primary-color;
+    background-color: $primary-color;
+    border-radius: 30px;
+    font-size: 27px;
+    margin-left: -153px;
+    padding: 5px 20px;
+    font-weight: 500;
+  }
+  .search-button:hover {
+    background-color: $primary-color;
+  }
+  .search-button:active {
+    transform: none;
   }
   #book-list {
     display: grid;
