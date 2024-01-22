@@ -25,13 +25,12 @@
 <body>
   
   <header>
-    <nav>
-    </nav>
+    <nav></nav>
   </header>
 
   <main>
     <h1>Your personal book concierge</h1><br>
-    <input type="text" id="genre" placeholder="search by genre"><button onclick="getBooks()">get books</button>
+    <input type="text" id="genre" placeholder="search by genre"><button class="search-button">get books</button>
 
     <div id="loader-center"></div>
 
@@ -39,13 +38,12 @@
       <!-- Book results will be displayed here -->
     </div>
     <div id="popup" class="popup">
-      <span class="close" onclick="closePopup()">X</span>
+      <span class="close-button">X</span>
       <div id="descriptionContent"></div>
     </div>
   </main>
 
-  <script src="./js/index.js"></script>
   <script src="/dist/bundle.js"></script>
-  
+
 </body>
 </html>
