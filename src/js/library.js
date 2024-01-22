@@ -22,11 +22,15 @@ export function getBooks() {
               <img src="https://covers.openlibrary.org/b/id/${
                 book.cover_id
               }-L.jpg" alt="${book.title}">
-              <h3>${book.title}</h3>
-              <br><p>Author: ${
-                book.authors ? book.authors[0].name : "Unknown"
-              }</p>
-              <br><button class="description-button">View Description</button>
+              <div class="book-details">
+                <h3>${book.title}</h3>
+                <p>Author: ${
+                  book.authors ? book.authors[0].name : "Unknown"
+                }</p>
+                <button class="description-button" data-book-key="${
+                  book.key
+                }">View Description</button>
+              </div>
             </div>
           `
           )
@@ -43,17 +47,17 @@ export function getBooks() {
     });
 }
 
-export function showDescription(bookKey) {
+export function showDescription(event) {
+  const bookKey = event.target.getAttribute("data-book-key");
   const bookUrl = `https://openlibrary.org${bookKey}.json`;
 
   fetch(bookUrl)
     .then((response) => response.json())
     .then((book) => {
       const popup = document.querySelector("#popup");
-      const descriptionContent = document.querySelector("#descriptionContent");
+      const descriptionContent = document.querySelector("#description-content");
       descriptionContent.innerHTML = `
           <h2>${book.title}</h2>
-          </p>
           <br><p><strong>Description:</strong> ${
             book.description || "No description available."
           }</p>

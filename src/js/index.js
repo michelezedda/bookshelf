@@ -12,5 +12,13 @@ import {
 document.querySelector("nav").appendChild(logoFn());
 
 searchButton.onclick = getBooks;
-descriptionButton.onclick = showDescription(`${book.key}`);
+
+document
+  .querySelector("#book-list")
+  .addEventListener("click", function (event) {
+    if (event.target.classList.contains("description-button")) {
+      showDescription(event);
+    }
+  });
+
 closeButton.onclick = closePopup;
