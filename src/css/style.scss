@@ -1,0 +1,124 @@
+@import 'config';
+
+* {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+}
+body {
+  // background-image: url(../img/background.png);
+  background-color: $bg;
+  color: $primary-color;
+}
+  /* HEADER */
+header {
+  nav {
+    background-color: $primary-color;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    position: sticky;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  img {
+    width: 400px;
+  }
+}
+  /* MAIN */
+main {
+  max-width: 80%;
+  background-color: $bg;
+  text-align: center;
+  border: 3px solid $border-color;
+  border-radius: 10px;
+  margin: 70px auto;
+  padding: 50px;
+  h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  input {
+    font-size: 20px;
+    border: 3px none $primary-color;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 4px 4px 4px $border-color;
+    margin-bottom: 50px;
+  }
+  button {
+    border: 3px none $primary-color;
+    background-color: $primary-color;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 4px 4px 4px $border-color,
+  }
+  button:hover {
+    background-color: #ffffffd3;
+    cursor: pointer;
+  }
+  button:active {
+    transform: scale(.98);
+  }
+  #book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .book {
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid $border-color;
+    background-color: $bg;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .book img {
+    max-width: 100%;
+    height: auto;
+  }
+  .loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .spinner {
+    display: block;
+    border: 4px solid $primary-color;
+    border-top: 4px solid $border-color;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $border-color;
+    border: 3px solid $primary-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@import 'media';
