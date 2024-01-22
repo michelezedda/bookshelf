@@ -33,7 +33,7 @@ main {
   background-color: $bg;
   text-align: center;
   border: 3px solid $border-color;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 70px auto;
   padding: 50px;
   input {
@@ -64,7 +64,6 @@ main {
     transform: scale(.98);
   }
   .search-button {
-    margin: 0 0 0 0;
     border: 1px none $primary-color;
     background-color: $primary-color;
     border-radius: 30px;
@@ -95,10 +94,6 @@ main {
   .book img {
     max-width: 100%;
     height: auto;
-  }
-  .loading {
-    text-align: center;
-    margin-top: 20px;
   }
   .spinner {
     display: block;

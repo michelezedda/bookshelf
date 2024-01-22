@@ -10,6 +10,28 @@
       width: 250px;
     }
   }
+  /* MAIN */
+  main {
+    input {
+      font-size: 20px;
+      margin-right: 0;
+      padding: 10px 100px 10px 10px;
+      box-shadow: 4px 4px 4px $border-color;
+      margin-bottom: 50px;
+    }
+    .search-button {
+      border: 1px none $primary-color;
+      background-color: $primary-color;
+      border-radius: 30px;
+      font-size: 20px;
+      margin-left: -113px;
+      padding: 10px;
+    }
+    .book img {
+      max-width: 30%;
+      height: auto;
+    }
+  }
 }
     
 @media (min-width: 750.02px) and (max-width: 1800px) {
@@ -21,10 +43,5 @@
     img {
       width: 350px;
     }
-  }
-    /* MAIN */
-  main h1 {
-    font-size: 35px;
-    margin-bottom: 30px;
   }
 }
