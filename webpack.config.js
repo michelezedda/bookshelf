@@ -42,6 +42,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "bookshelf app",
       template: "src/index.html",
+      favicon: "src/img/favicon.ico",
     }),
   ],
   devServer: {
