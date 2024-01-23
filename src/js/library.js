@@ -2,9 +2,9 @@ import "../css/style.css";
 
 export const searchButton = document.querySelector(".search-button");
 export const closeButton = document.querySelector(".close-button");
-export let descriptionButton = document.querySelector(".description-button");
+export const descriptionButton = document.querySelector(".description-button");
 
-export function getBooks() {
+export async function getBooks() {
   const genre = document.querySelector("#genre").value;
   const bookListContainer = document.querySelector("#book-list");
   bookListContainer.innerHTML = '<div class="spinner"></div>';
@@ -47,7 +47,7 @@ export function getBooks() {
     });
 }
 
-export function showDescription(event) {
+export async function showDescription(event) {
   const bookKey = event.target.getAttribute("data-book-key");
   const bookUrl = `https://openlibrary.org${bookKey}.json`;
 
@@ -70,6 +70,6 @@ export function showDescription(event) {
     });
 }
 
-export function closePopup() {
+export async function closePopup() {
   document.querySelector("#popup").style.display = "none";
 }
