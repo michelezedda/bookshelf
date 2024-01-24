@@ -6,9 +6,12 @@ export const searchButton = document.querySelector(".search-button");
 export const closeButton = document.querySelector(".close-button");
 export const descriptionButton = document.querySelector(".description-button");
 
+// Async function to fetch books based on selected genre
 export async function getBooks() {
   const genre = document.querySelector("#genre").value;
   const bookListContainer = document.querySelector("#book-list");
+
+  // Displaying a spinner while data is being fetched
   bookListContainer.innerHTML = '<div class="spinner"></div>';
 
   try {
@@ -50,6 +53,7 @@ export async function getBooks() {
   }
 }
 
+// Async function to show book description in a popup
 export async function showDescription(event) {
   const bookKey = event.target.getAttribute("data-book-key");
   const bookUrl = `https://openlibrary.org${bookKey}.json`;
@@ -80,6 +84,7 @@ export async function showDescription(event) {
   }
 }
 
+// Function to close the popup
 export function closePopup() {
   document.querySelector("#popup").style.display = "none";
 }
