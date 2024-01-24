@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: {
@@ -44,6 +45,7 @@ module.exports = {
       template: "src/index.html",
       favicon: "src/img/favicon.ico",
     }),
+    new Dotenv(),
   ],
   devServer: {
     port: 5000,
