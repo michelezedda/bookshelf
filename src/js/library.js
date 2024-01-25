@@ -49,7 +49,7 @@ export async function getBooks() {
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-    bookListContainer.innerHTML = "<div>Error fetching data</div>";
+    bookListContainer.innerHTML = "<div>You must type a valid genre!</div>";
   }
 }
 
