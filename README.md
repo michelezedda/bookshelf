@@ -41,4 +41,5 @@ bookshelf will show you the selected book description via pop-up.
 
 ## Project Link
 
-You can try bookshelf by clicking the following link :link: [bookshelf](https://bookshelf-search.netlify.app/)
+You can try bookshelf by clicking the following link :link: [bookshelf](https://bookshelf-search.netlify.app/) <br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/57048cd9-6d1b-41f9-a7d6-c9fc8072a927/deploy-status)](https://app.netlify.com/sites/bookshelf-search/deploys)
